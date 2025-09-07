@@ -1,0 +1,6 @@
+\JETPLTOC{section}{\LocalTOCitem{1}{Введение}{1}}
+\JETPLTOC{section}{\LocalTOCitem{2}{Вычисление свободной энергии комбинаторным методом}{3}}
+\JETPLTOC{section}{\LocalTOCitem{3}{Термодинамические и фрустрационные особенности обобщенной модели Изинга на квадратной решетке}{12}}
+\JETPLTOC{section}{\LocalTOCitem{4}{Замощение шахматной решетки плитками домино}{21}}
+\JETPLTOC{section}{\LocalTOCitem{5}{Заключение}{23}}
+\JETPLTOC{section}{\LocalTOCitem{}{\T2A\CYRL \T2A\cyri \T2A\cyrt \T2A\cyre \T2A\cyrr \T2A\cyra \T2A\cyrt \T2A\cyru \T2A\cyrr \T2A\cyra }{24}}
