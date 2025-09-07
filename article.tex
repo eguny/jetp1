@@ -148,13 +148,13 @@ Z_{N} = \sum_{\{\sigma\}} \exp{\bigg[ K_1 \sum_{\substack{ix = 1,3,\dots \\ jx =
 \begin{equation*}
 	\frac{1}{2!} \sum_{r_1 + r_2 = r} f_{r_1} f_{r_2}
 \end{equation*}
-где множитель $2!$ в знаменателе учитывает, что перестановка двух индексов приводит к одной и той же паре замкнутых многоугольников. Аналогичный множитель $n!$ присутствует в знаменателе суммы для $n$ многоугольников.
+где множитель $2!$ в знаменателе учитывает, что перестановка двух индексов приводит к одной и той же паре замкнутых многоугольников. Аналогичный множитель $s!$ присутствует в знаменателе суммы для $s$ многоугольников.
 
 Следовательно, функцию $S$ можно записать как
 \begin{equation}
 	S (v, u, t, w) = \sum_{s = 0}^{\infty} (-1)^s \frac{1}{s!} \sum_{r_1 + r_2 + \dots r_s = r}^{\infty} f_{r_1} f_{r_2} \dots f_{r_s}, 
 \end{equation}
-где $f_{r_n} = f_{r_n}(v, u, w, t)$.
+где $f_{r_s} = f_{r_s}(v, u, w, t)$.
 
 Поскольку в $S$ есть члены, соответствующие множествам замкнутым многоугольникам с любой возможной общей длиной $r = r_1 + r_2 + \dots$ , в сумме индексы $r_1, r_2, \dots$ принимают независимо все значения от $1$ до $\infty$, так что
 \begin{equation*}
@@ -185,9 +185,9 @@ Z_{N} = \sum_{\{\sigma\}} \exp{\bigg[ K_1 \sum_{\substack{ix = 1,3,\dots \\ jx =
 где член $1/(2r)$ учитывает тот факт, что в сумме в правой части каждый замкнутый многоугольник может быть пересечен в двух противоположных направлениях и может иметь любой из своих $r$ узлов в качестве отправной точки. Благодаря своему определению, функция $W_r(i, j, \mu)$ удовлетворяет рекуррентным соотношениям
 \begin{align}
 	W_{r+1} (i, j, 1) &= 0 + 0 + 0 + 0 + v W_r(i-1,j,5) + u e^{-i\frac{\pi}{4}} W_r(i,j-1,6) + 0 + t e^{i\frac{\pi}{4}} W_r(i,j+1,8),\nonumber\\
-	W_{r+1} (i, j, 2) &= 0 + 0 + 0 + 0 + v e^{i\frac{\pi}{4}}W_r(i-1,j,5) + u W_r(i,j-1,6) + w e^{-i\frac{\pi}{4}} W_r(i+1,j,7),\nonumber\\
+	W_{r+1} (i, j, 2) &= 0 + 0 + 0 + 0 + v e^{i\frac{\pi}{4}}W_r(i-1,j,5) + u W_r(i,j-1,6) + w e^{-i\frac{\pi}{4}} W_r(i+1,j,7) + 0,\nonumber\\
 	W_{r+1} (i, j, 3) &= 0 + 0 + 0 + 0 + 0 + u e^{i\frac{\pi}{4}} W_r(i,j-1,6) + w W_r(i+1,j,7) + t e^{-i\frac{\pi}{4}} W_r(i,j+1,8),\nonumber\\
-	W_{r+1} (i, j, 4) &= 0 + 0 + 0 + 0 + 0 + v e^{-i\frac{\pi}{4}} W_r(i-1,j,5) + 0 + w e^{i\frac{\pi}{4}} W_r(i+1,j,7) + t W_r(i,j+1,8).\nonumber\\
+	W_{r+1} (i, j, 4) &= 0 + 0 + 0 + 0 + v e^{-i\frac{\pi}{4}} W_r(i-1,j,5) + 0 + w e^{i\frac{\pi}{4}} W_r(i+1,j,7) + t W_r(i,j+1,8).\nonumber\\
 	W_{r+1} (i, j, 5) &= w W_r(i-1,j,1) + t e^{-i\frac{\pi}{4}} W_r(i,j-1,2) + 0 + u e^{i\frac{\pi}{4}} W_r(i,j+1,4) + 0 + 0 + 0 + 0, \nonumber\\
 	W_{r+1} (i, j, 6) &= w e^{i\frac{\pi}{4}}W_r(i-1,j,1) + t W_r(i,j-1,2) + v e^{-i\frac{\pi}{4}} W_r(i+1,j,3) + 0 + 0 + 0 + 0 + 0,\nonumber\\
 	W_{r+1} (i, j, 7) &= 0 + t e^{i\frac{\pi}{4}} W_r(i,j-1,2) + v W_r(i+1,j,3) + u e^{-i\frac{\pi}{4}} W_r(i,j+1,4) + 0 + 0 + 0 + 0,\nonumber\\
@@ -269,9 +269,9 @@ w \alpha^{-1} \epsilon^{-p}\!\!\! & 0\!\!\! & v \alpha \epsilon^{p}\!\!\! & u \e
 	\left(u^2-1\right) \left(w^2-1\right)\right)-\\&- 2 v w \left(t^2-1\right) \left(u^2-1\right) \cos \omega_1 - 2 t u \left(v^2-1\right) \left(w^2-1\right) \cos \omega_2,\\ \omega_1 &= \frac{2\pi p}{L}, \omega_2 = \frac{2\pi q}{L}.
 \end{align*}
 
-В результате, выражение для свободной энергии (приходящейся на один узел) обобщенной модели Изинга на квадратной решетке с двумя трансляциями в горизонтальном и вертикальном направлениях имеет следующий вид
+В результате, выражение для свободной энергии Гельмгольца (приходящейся на один узел) обобщенной модели Изинга на квадратной решетке с двумя трансляциями в горизонтальном и вертикальном направлениях имеет следующий вид
 \begin{multline}
-	F(T) = -T \ln Z = -T\ln \lambda_g =  -\ln 2 - \ln \ch \Big(\frac{J_1}{T}\Big) - \ln \ch \Big(\frac{J_2}{T}\Big) - \ln \ch \Big(\frac{J_3}{T}\Big) - \ln \ch \Big(\frac{J_4}{T}\Big) -\\- \frac{T}{4\pi^2} \int_{0}^{2\pi} \int_{0}^{2\pi} \frac{1}{4} \ln D(\omega_1, \omega_2) d\omega_1 d\omega_2.
+	F(T) = -T \ln Z = -T\ln \lambda_g =  -T\ln 2 - \frac{T}{2}\bigg(\ln \ch K_1 + \ln \ch K_2 + \ln \ch K_3 + \ln \ch K_4\bigg) -\\- \frac{T}{4\pi^2} \int_{0}^{2\pi} \int_{0}^{2\pi} \frac{1}{4} \ln D(\omega_1, \omega_2) d\omega_1 d\omega_2.
 \end{multline}
 
 Путем несложных преобразований в конечном итоге получается точное аналитическое решение обобщенной модели Изинга на квадратной решетке, совпадающее с решением, приведенным Сиози в статье~\cite{syozi1972}
@@ -368,60 +368,7 @@ S_{T\rightarrow 0} = \frac{G}{\pi} = 0.29156\dots,
 	\label{Hex}
 \end{figure}
 
-% \begin{figure}[h]
-% 	\begin{minipage}{0.45\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig9(a).eps} \\ а)}
-% 	\end{minipage}
-% 	\hfill
-% 	\begin{minipage}{0.45\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig9(b).eps} \\ б)}
-% 	\end{minipage}
-% 	\vfill
-% 	\begin{minipage}{0.45\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig9(c).eps} \\ в)}
-% 	\end{minipage}
-% 	\hfill
-% 	\begin{minipage}{0.45\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig9(d).eps} \\ г)}	
-% 	\end{minipage}
-% 	\caption{а) и б) <<Прямые>> цепочки, в) и г) Цепочки <<лестничного>> типа.}
-% 	\label{linearChains}
-% \end{figure}
-
-% При занулении сразу двух обменных взаимодействий на обобщенной квадратной решетке получается линейная цепочка, причем существуют различные ее варианты. К ним относятся так называемые <<прямые>> цепочки (рис.~\ref{linearChains}а и рис.~\ref{linearChains}б) и цепочки <<лестничного>> типа (рис.~\ref{linearChains}в и рис.~\ref{linearChains}г). Несмотря на различия в структуре, все эти цепочки демонстрируют одинаковые температурные зависимости энтропии и теплоемкости (рис.~\ref{Linear}). Как известно~\cite{mussardo2010}, любая линейная цепочка не обнаруживает точки перехода, за исключением $T=0$.
-% \begin{figure}[h]
-% 	\begin{minipage}[h]{0.5\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig10(a).eps} \\ а)}
-% 	\end{minipage}
-% 	\hfill
-% 	\begin{minipage}[h]{0.5\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig10(b).eps} \\ б)}
-% 	\end{minipage}
-% 	\caption{Температурные зависимости обобщенной квадратной решетки с двумя ненулевыми и двумя нулевыми взаимодействиями (линейная цепочка): а) энтропия, б) теплоемкость.}
-% 	\label{Linear}
-% \end{figure}
-
 При занулении сразу двух обменных взаимодействий на обобщенной квадратной решетке получается линейная цепочка, а при занулении трех из четырех обменных взаимодействий, например, $J_2 = J_3 = J_4 = 0$, получается решетка димеров, которая при любом знаке (но отличном от нуля) оставшегося обменного взаимодействия является фрустрированной. В случае димеров нуль-температурная энтропия принимает значение $\ln 2/2$, что отражает наличие вырожденного основного состояния и остаточной энтропии.
-
-% \begin{figure}[h]
-% 	\center{\includegraphics[width=0.45\linewidth]{Pictures/fig11.eps}}
-% 	\caption{Решетка димеров, получаемая из обобщенной квадратной решетки, занулением любых трех взаимодействий, здесь $J_2 = J_3 = J_4 = 0$.}
-% 	\label{dimerLattice}
-% \end{figure}
-
-% Взаимодействие между спинами в одном димере может быть либо ферромагнитным (спины параллельны), либо антиферромагнитным (спины антипараллельны). Количество таких пар, связанных спинов равно $N/2$, что объясняет появление двойки в знаменателе формулы для нуль-температурной энтропии. Поскольку пары спинов не влияют друг на друга, направление спинов в любой паре не коррелирует с направлением спинов соседних пар. Температурные зависимости энтропии и теплоемкости представлены на рисунке~\ref{Dimers}. Аналогичные зависимости возникают при занулении любых трех взаимодействий на обобщенной квадратной решетке, независимо от знака оставшегося взаимодействия (антиферромагнитного или ферромагнитного).
-
-% \begin{figure}[h]
-% 	\begin{minipage}[h]{0.5\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig12(a).eps} \\ а)}
-% 	\end{minipage}
-% 	\hfill
-% 	\begin{minipage}[h]{0.5\linewidth}
-% 		\center{\includegraphics[width=1\linewidth]{Pictures/fig12(b).eps} \\ б)}
-% 	\end{minipage}
-% 	\caption{Температурные зависимости обобщенной квадратной решетки с тремя нулевыми и одним ненулевым взаимодействиями (решетка димеров): а) энтропия, б) теплоемкость. Пунктирной линией обозначена нуль-температурная энтропия: $S_{T\rightarrow 0} = \ln 2/2\approx 0.34657$.}
-% 	\label{Dimers}
-% \end{figure}
 
 В случае, когда все взаимодействия равны нулю $J_1 = J_2 = J_3 = J_4 = 0$, энтропия независимо от температуры принимает постоянное значение $\ln 2$. При рассмотрении энтропии на один узел решетки $S/N$ данный результат отражает, что каждый спин может находиться в одном из двух состояний (спин вверх или спин вниз). Отсутствие взаимодействий между спинами приводит к их свободной ориентации, что соответствует парамагнитному состоянию системы. Такое состояние достигается при стремлении температуры к бесконечности.
 
@@ -431,11 +378,11 @@ S_{T\rightarrow 0} = \frac{G}{\pi} = 0.29156\dots,
 
 \begin{figure}[h]
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig13(a).eps} \\ а)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig9(a).eps} \\ а)}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig13(b).eps} \\ б)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig9(b).eps} \\ б)}
 	\end{minipage}
 	\caption{Температурные зависимости обобщенной квадратной решетки для различных параметров обменных взаимодействий: фиолетовая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 1$, желтая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 2$, розовая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 5$, синяя кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 8$, красная кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 10$, зеленая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 14$: а) энтропия. Пунктирными линиями обозначены значения нуль-температурных энтропий: $S_{T\rightarrow 0} = G/\pi\approx 0.29156$, где $G$ --- постоянная Каталана, $S_{T\rightarrow 0} = \frac{1}{2\pi} \Cl_2 (\frac{\pi}{3})\approx0.16153$, где $\Cl_2 (\varphi)$ --- функция Клаузена. б) теплоемкость. Пунктирной линией обозначено положение дополнительного гладкого пика ($T_{peak}\approx1.232$).}
 	\label{Peak}
@@ -467,11 +414,11 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 
 \begin{figure}[h]
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig133(a).eps} \\ а)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig10(a).eps} \\ а)}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig133(b).eps} \\ б)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig10(b).eps} \\ б)}
 	\end{minipage}
 	\caption{Теплоемкость обобщенной квадратной решетки как функция температуры при $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 6.63$.}
 	\label{PlatoC}
@@ -481,11 +428,11 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 
 \begin{figure}[h]
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig14(a).eps} \\ а)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig11(a).eps} \\ а)}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig14(b).eps} \\ б)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig11(b).eps} \\ б)}
 	\end{minipage}
 	\caption{Температурные зависимости обобщенной квадратной решетки для различных параметров обменных взаимодействий: фиолетовая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 0$, желтая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 0.1$, розовая кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 0.3$, синяя кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 0.5$, красная кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 0.8$, черная кривая --- $J_1 = -1$, $J_2 = -1$, $J_3 = -1$, $J_4 = 1$: а) энтропия. Пунктирными линиями обозначены значение нуль-температурной энтропии: $S_{T\rightarrow 0} = G/\pi\approx 0.29156$, где $G$ --- постоянная Каталана и значение точки перехода для гексагональной решетки $T_c = 2/\ln(2+\sqrt{3})\approx 1.5187$. б) теплоемкость. Пунктирной линией обозначено значение точки перехода для гексагональной решетки $T_c = 2/\ln(2+\sqrt{3})\approx 1.5187$. }
 	\label{Peak2}
@@ -495,18 +442,18 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 
 \begin{figure}[h]
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig15(a).eps} \\ а)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig12(a).eps} \\ а)}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig15(b).eps} \\ б)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig12(b).eps} \\ б)}
 	\end{minipage}
 	\caption{Температурные зависимости обобщенной квадратной решетки для различных параметров обменных взаимодействий: фиолетовая кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 1$, желтая кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 3$, розовая кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 5$, синяя кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 8$, красная кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 11$, зеленая кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 13$, темно-зеленая кривая --- $J_1 = 1$, $J_2 = 1$, $J_3 = 1$, $J_4 = 15$: а) энтропия, б) теплоемкость. Пунктирными линиями обозначены значения точек перехода для квадратной и треугольной решеток соответственно: $T_c = 2/\ln(1+\sqrt{2})\approx 2.2692$,  $T_c = 4/\ln 3\approx 3.64096$. Черной пунктирной линией обозначены температурные зависимости энтропии и теплоемкости треугольной решетки с параметрами $J_1 = J_2 = J_3 = 1$.}
 	\label{Triangular}
 \end{figure}
 
 \begin{figure}[h]
-	\center{\includegraphics[width=1\linewidth]{Pictures/fig16.eps}}
+	\center{\includegraphics[width=1\linewidth]{Pictures/fig13.eps}}
 	\caption{Преобразование обобщенной квадратной решетки к треугольной решетке, устремляя одно из обменных взаимодействий к бесконечности}
 	\label{triag}
 \end{figure}
@@ -516,7 +463,7 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 При рассмотрении обобщенной квадратной решетки с параметрами $J_1 = -1, J_2 = -1, J_3 = -1$ и $J_4 > 0$ наблюдалось аналогичное поведение: увеличение значения параметра $J_4$ приводило к трансформации обобщенной квадратной решетки в другую структуру. Однако на практике параметр $J_4$ можно увеличить лишь до некоторого конечного значения, а не до бесконечности. В результате система не переходит в треугольную решетку, а формируется топологически искаженная решетка Кагоме~(см. рис.~\ref{kagomelike}). Такая решетка характеризуется наличием шестиугольников и треугольников различных размеров, в отличие от классической решетки Кагоме, где все треугольники имеют одинаковый размер. 
 
 \begin{figure}[h]
-	\center{\includegraphics[width=1\linewidth]{Pictures/fig17.eps}}
+	\center{\includegraphics[width=1\linewidth]{Pictures/fig14.eps}}
 	\caption{Получение искаженной кагоме решетки из обобщенной модели Изинга при конечном увеличении одного из параметров обменного взаимодействия}
 	\label{kagomelike}
 \end{figure}
@@ -527,11 +474,11 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 
 \begin{figure}[h]
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig188(a).eps} \\ а)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig15(a).eps} \\ а)}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.5\linewidth}
-		\center{\includegraphics[width=1\linewidth]{Pictures/fig188(b).eps} \\ б)}
+		\center{\includegraphics[width=1\linewidth]{Pictures/fig15(b).eps} \\ б)}
 	\end{minipage}
 	\caption{а) Нуль-температурная энтропия обобщенной квадратной решетки при $J_1 = J_2 = J_3 = -1$ как функция от обменного взаимодействия $J_4$, б) Температура перехода обобщенной квадратной решетки при $J_1 = J_2 = J_3 = -1$ как функция от обменного взаимодействия $J_4$}
 	\label{Interaction}
@@ -557,11 +504,11 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 
 \begin{figure}[h]
 	\begin{minipage}[h]{0.4\linewidth}
-		\center{\includegraphics[width=0.7\linewidth]{Pictures/fig18(a).eps} \\ а)}
+		\center{\includegraphics[width=0.7\linewidth]{Pictures/fig16(a).eps} \\ а)}
 	\end{minipage}
 	\hfill
 	\begin{minipage}[h]{0.4\linewidth}
-		\center{\includegraphics[width=0.7\linewidth]{Pictures/fig18(b).eps} \\ б)}
+		\center{\includegraphics[width=0.7\linewidth]{Pictures/fig16(b).eps} \\ б)}
 	\end{minipage}
 	\caption{Два вида ячеек на обобщенной квадратной решетке}
 	\label{cell}
@@ -572,7 +519,7 @@ G = \Cl_2 \bigg(\frac{\pi}{2}\bigg) = \im (\Li_2 (i)),
 Фактически, Кастелайн и другие исследователи в своих работах рассматривали именно шахматную решетку. При этом каждый димер в решетке покрывает пару соседних узлов разных типов — в данной работе эти два типа узлов обозначены символами кружка ($\circ$) и креста ($\times$) (см. рис.~\ref{point}). Аналогично, при замощении квадратной решетки плитками домино каждая плитка покрывает две соседние, но различные ячейки, изображенные на рисунке~\ref{cell}.
 
 \begin{figure}[h]
-	\center{\includegraphics[width=0.5\linewidth]{Pictures/fig19.eps}}
+	\center{\includegraphics[width=0.5\linewidth]{Pictures/fig17.eps}}
 	\caption{Шахматная решетка}
 	\label{chessLattice}
 \end{figure}
